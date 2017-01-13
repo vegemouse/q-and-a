@@ -1,0 +1,10 @@
+{ "questions": [{
+    "question": "What is the meaning of life?",
+    "author": "Some nerd",
+    "notes": "Asking for a friend..."
+  }, {
+    "question": "Why is the sky blue?",
+    "author": "Some other nerd",
+    "notes": "Just curious."
+  }]
+}
