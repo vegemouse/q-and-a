@@ -1,0 +1,11 @@
+<p>{{question.notes}}</p>
+<p>Asked by {{question.author}}</p>
+
+<h2>Answers</h2>
+<ul>
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
+
+<button {{action 'delete' question}}>X</button>

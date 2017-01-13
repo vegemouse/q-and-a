@@ -1,5 +1,5 @@
-{{#each model as |question|}}
-  {{question-tile question=question destroyQuestion="destroyQuestion"}}
+{{#each model.questions as |question|}}
+  {{question-tile question=question update="update" destroyQuestion="destroyQuestion"}}
 {{/each}}
 
 {{new-question saveQuestion="saveQuestion"}}
