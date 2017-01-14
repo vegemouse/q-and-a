@@ -1,30 +1,34 @@
-{{#if addNewQuestion}}
-  <h3>What's your question?</h3>
-  <div>
-    <form>
+<div class="new-question-container">
 
-      <div class="form-group">
-        <label for="author">Your name?</label>
-        {{input value=author id="author"}}
-      </div>
+  {{#if addNewQuestion}}
+  <div class="new-question-form">
+    <h3>What's your question?</h3>
+      <form>
 
-      <div class="form-group">
-        <label for="question">Your question?</label>
-        {{input value=question id="question"}}
-      </div>
+        <div class="form-group">
+          <label for="author">Your name?</label><br>
+          {{input value=author id="author"}}
+        </div>
 
-      <div class="form-group">
-        <label for="notes">Anything else we should know?</label>
-        {{input value=notes id="notes"}}
-      </div>
+        <div class="form-group">
+          <label for="question">Your question?</label><br>
+          {{input value=question id="question"}}
+        </div>
 
-      <button {{action 'saveQuestion'}}>Ask!</button>
-      <button {{action 'questionFormHide'}}>Cancel</button>
+        <div class="form-group">
+          <label for="notes">Anything else we should know?</label><br>
+          {{input value=notes id="notes"}}
+        </div>
 
-    </form>
-  </div>
+        <button {{action 'saveQuestion'}}>Ask!</button>
+        <button {{action 'questionFormHide'}}>Cancel</button>
+
+      </form>
+    </div>
 
 
-{{else}}
-  <button {{action 'questionFormShow'}}>Ask a question</button>
-{{/if}}
+  {{else}}
+    <button id="new-question" {{action 'questionFormShow'}}>Ask a question</button>
+  {{/if}}
+
+</div>
